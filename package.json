@@ -1,0 +1,56 @@
+{
+  "name": "dsh-archive-confirm",
+  "version": "0.1.0",
+  "description": "给 DSH Web 的「归档会话」加一道二次确认：拦截 uiWorkspace.archiveSession，覆盖侧栏行尾图标、右键菜单与快捷键。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.1.7-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "plugin",
+    "session",
+    "archive",
+    "confirm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiayaoting/dsh-archive-confirm.git"
+  },
+  "homepage": "https://github.com/jiayaoting/dsh-archive-confirm",
+  "bugs": {
+    "url": "https://github.com/jiayaoting/dsh-archive-confirm/issues"
+  },
+  "author": "jiayaoting",
+  "license": "MIT"
+}

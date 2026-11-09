@@ -1,0 +1,5 @@
+# dsh-archive-confirm 的 bundle patch：往 profile 的加载树里插入一行。
+# 这一行决定「已安装插件列表」里的条目；停用它即恢复官方原行为。
+- insert:
+    - id: archive-confirm
+      name: dsh-archive-confirm
